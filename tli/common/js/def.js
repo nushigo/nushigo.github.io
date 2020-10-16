@@ -5,8 +5,8 @@ Author:MoshiNuku!!(Wa,Ki,Yo,Nu)
 Last Update:2016/07/21
 **/
 
-/* ページ先端へスクロール */
-/** #がつく所にページ内なら何処でも移動するよ、キミは何処へ行く？ **/
+/* �y�[�W��[�փX�N���[�� */
+/** #�������Ƀy�[�W���Ȃ牽���ł��ړ������A�L�~�͉����֍s���H **/
 $(function(){
 	$('a[href^=#]').click(function(){
 		var speed = 1000;
