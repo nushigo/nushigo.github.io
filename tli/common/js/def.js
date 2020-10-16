@@ -1,12 +1,13 @@
+<<<<<<< HEAD
 /**
 Name:Default Script
-URL:http://172.18.2.242/~kzg7/common/js/def.js
-Author:MoshiNuku!!(Wakabayashi,Kiuchi,Yomoda,Nukui)
+URL:https://nushigo.github.io/tli/common/js/def.js
+Author:MoshiNuku!!(Wa,Ki,Yo,Nu)
 Last Update:2016/07/21
 **/
 
-/* �y�[�W��[�փX�N���[�� */
-/** #�������Ƀy�[�W���Ȃ牽���ł��ړ������A�L�~�͉����֍s���H **/
+/* ページ先端へスクロール */
+/** #がつく所にページ内なら何処でも移動するよ、キミは何処へ行く？ **/
 $(function(){
 	$('a[href^=#]').click(function(){
 		var speed = 1000;
@@ -16,4 +17,25 @@ $(function(){
 		$("html, body").animate({scrollTop:position}, speed, "swing");
 		return false;
 	});
-});
+});	
+=======
+/**
+Name:Default Script
+URL:https://nushigo.github.io/tli/common/js/def.js
+Author:MoshiNuku!!(Wa,Ki,Yo,Nu)
+Last Update:2016/07/21
+**/
+
+/* ページ先端へスクロール */
+/** #がつく所にページ内なら何処でも移動するよ、キミは何処へ行く？ **/
+$(function(){
+	$('a[href^=#]').click(function(){
+		var speed = 1000;
+		var href= $(this).attr("href");
+		var target = $(href == "#" || href == "" ? 'html' : href);
+		var position = target.offset().top;
+		$("html, body").animate({scrollTop:position}, speed, "swing");
+		return false;
+	});
+});	
+>>>>>>> a8a6a12227271f70bde43b52d08298126461790d
