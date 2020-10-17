@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="robots" content="noindex,follow" />
+		<meta http-equiv="imagetoolbar" content="no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="format-detection" content="telephone=no" />
+		<link rel="stylesheet" href="../../common/css/style.css" />
+		<style type="text/css">
+			table tr th,
+			table tr td {
+				padding: 0 10px;
+				border: 1px solid #000;
+				vertical-align: middle;
+			}
+			table tr th {
+				text-align: center;
+				font-weight: bold;
+			}
+			table td {
+				text-align: center;
+			}
+			table th {
+				background-color: #ccc;
+			}
+		</style>
+		<script src="../../common/js/jquery-3.2.1.min.js"></script>
+		<script src="../../common/js/jquery.sticky.js"></script>
+		<script src="../../common/js/footerFixed.js"></script>
+		<script src="../../common/js/def.js"></script>
+		<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+		<script>
+			$(function() {
+				$('.answer-btn').click(function(){
+					$('.study-answer').show();
+				});
+				$('.answer-btn2').click(function(){
+					$('.study-answer').hide();
+				});
+				$('.answer-btn3').click(function(){
+					$('.study-answer2').show();
+				});
+				$('.answer-btn4').click(function(){
+					$('.study-answer2').hide();
+				});
+			});
+		</script>
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+			<script src="https://raw.githubusercontent.com/livingston/css3-mediaqueries-js/master/css3-mediaqueries.js"></script>
+		<![endif]-->
+		<title>[Lesson 10] while 文 | 問題集 | JavaScript 実習問題集</title>
+	</head>
+	<body>
+		<div class="sp_off">
+			<header id="main-head">
+				<div class="inner">
+					<div class="sitename">
+						<h1><a href="../../index.html">JavaScript 実習問題集</a></h1>
+					</div>
+					<nav class="sitenav">
+						<ul>
+							<li><a target="_top" href="../../index.html">トップページ</a></li>
+							<li><a target="_top" href="../../study/index.html">問題集</a></li>
+							<li><a target="_top" href="../../beginner-course/index.html">初心者向けコース</a></li>
+					</nav>
+				</div>
+			</header>
+
+			<main id="wrapper">
+				<nav class="pkz-list">
+					・ <a target="_top" href="../../index.html">トップページ</a> ＞ <a target="_top" href="../index.html">問題集</a> ＞ [Lesson 10] while 文
+				</nav>
+				<br />
+
+				<h1 class="study-mds">[Lesson 10] while 文</h1>
+				<hr class="size01_black" />
+				<strong>while文を使用し、指定された連続した数値の合計を求める関数を作成しましょう。</strong><br /><br />
+				[　保存名　]　L10<br />
+				[　プログラム仕様書　]　while文を使用し、指定された数値までの足し算を繰り返すgoukei関数を作成する。<br />
+				[　実行イメージ　]<br />
+				<img src="../../common/img/L10.png" width="900px" height="216px">
+				<br /><br />
+				[コード入力手順]<br />
+				①　指定された数値nまで足し算を繰り返すgoukei(n)関数を作成する。<br />
+				　　・繰り返しの処理は<strong>while</strong>を使用する。<br />
+				<div class="blank-space-frame" style="width:400px; height:220px; margin:5px 0 0 3px; padding-left: 30px;">
+					function goukei(p){<br />
+					　　total=0;<br />
+					　　i-1;<br />
+					　　while(i<=n){<br />
+					　　　　total=<span class="blank-space-frame">　　　</span> ;<br />
+					　　　　i++;<br />
+					　　}<br />
+					　　return <span class="blank-space-frame">　　</span> ;<br />
+					}<br />
+				</div>
+				②　変数xを用意し100を代入する。<br />
+				③　goukei()関数を引数xで呼び出して使用する。<br /><br />
+
+				<h2>ポイント</h2>
+				<hr class="size01_black" />
+				<strong>■ while文のループ</strong><br />
+				while文によるループは、条件が真である間ループを繰り返します。<br />
+				条件には論理地（真か偽）を繰り返す条件式を作成します。<br />
+				<div class="blank-space-frame" style="width:400px; height:75px; margin:5px 0 0 3px; padding-left: 30px;">
+					while(条件){<br />
+					　　処理;<br />
+					}<br />
+				</div>
+				<br />
+				<strong>■ 合計を求めるアルゴリズム</strong><br />
+				合計を求めるには、合計用の記憶場所「total：」を用意して集計します。<br />
+				電卓で集計するときは始めにAC(All Clear)キーを押して0にしてから始めるのと同じように初期値を必ず0にしておきます。<br />
+				total=0;<br />
+				そして、集計するデータを「total」に繰り返し加算していきます。これは電卓で表示されている古い合計にデータを加算して新しい合計を表示するのと同じです。<br />
+				total+=i;(またはtotal=total+i;)<br />
+				求めた値(total)を返すときは、return文を使います。<br />
+				return total;<br /><br />
+
+				<h2>追加練習</h2>
+				<hr class="size01_black" />
+				変数xの値を変更して計算の確認を行う。<br />
+				<br />
+				<p><big><strong>実行イメージ</strong></big></p>
+				<img src="../../common/img/L10-adst01.png" width="900px" height="216px"><br />
+				<span style="font-size:13px">※実行イメージでは、「222」を代入しています。</span>
+				<br /><br />
+
+				<h2>答え</h2>
+				<hr class="size01_black" />
+				分からなかった場合などは答えを見てみましょう。<br /><br />
+				<button class="answer-btn">L10の答えを開く</button>
+				<button class="answer-btn2">L10の答えを閉じる</button>
+				<div class="study-answer">
+<pre><code class="prettyprint linenums lang-js">
+&lt;script&gt;
+function goukei(n){
+	total=0;
+	i=1;
+	while(i<=n){
+		total+=i;
+		i++;
+	}
+	return total;
+}
+var x=100;
+
+goukei(x);
+
+document.write("1 から "+x+" までの合計は "+total+" です。");
+&lt;/script&gt;
+</code></pre>
+				</div>
+				<br /><br />
+				<button class="answer-btn3">L10 演習問題の答えを開く</button>
+				<button class="answer-btn4">L10 演習問題の答えを閉じる</button>
+				<div class="study-answer2">
+<pre><code class="prettyprint linenums lang-js">
+&lt;script&gt;
+function goukei(n){
+	total=0;
+	i=1;
+	while(i<=n){
+		total+=i;
+		i++;
+	}
+	return total;
+}
+var x=222;
+
+goukei(x);
+
+document.write("1 から "+x+" までの合計は "+total+" です。");
+&lt;/script&gt;
+</code></pre>
+				</div>
+			</main>
+
+			<footer id="footer">
+				<div class="fdr-wrapper">
+					<center><p><a target="_top" href="../../index.html">トップページ</a> | <a target="_top" href="../../study/index.html">問題集</a> | <a target="_top" href="../../beginner-course/index.html">初心者向けコース</a></p></center>
+					<center><p>&copy; 2018 TOKYO ELECTRONICS COLLEGE</p></center>
+					<br />
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

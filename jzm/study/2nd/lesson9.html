@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="robots" content="noindex,follow" />
+		<meta http-equiv="imagetoolbar" content="no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="format-detection" content="telephone=no" />
+		<link rel="stylesheet" href="../../common/css/style.css" />
+		<style type="text/css">
+			table tr th,
+			table tr td {
+				padding: 0 10px;
+				border: 1px solid #000;
+				vertical-align: middle;
+			}
+			table tr th {
+				text-align: center;
+				font-weight: bold;
+			}
+			table td {
+				text-align: center;
+			}
+			table th {
+				background-color: #ccc;
+			}
+		</style>
+		<script src="../../common/js/jquery-3.2.1.min.js"></script>
+		<script src="../../common/js/jquery.sticky.js"></script>
+		<script src="../../common/js/footerFixed.js"></script>
+		<script src="../../common/js/def.js"></script>
+		<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+		<script>
+			$(function() {
+				$('.answer-btn').click(function(){
+					$('.study-answer').show();
+				});
+				$('.answer-btn2').click(function(){
+					$('.study-answer').hide();
+				});
+				$('.answer-btn3').click(function(){
+					$('.study-answer2').show();
+				});
+				$('.answer-btn4').click(function(){
+					$('.study-answer2').hide();
+				});
+			});
+		</script>
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+			<script src="https://raw.githubusercontent.com/livingston/css3-mediaqueries-js/master/css3-mediaqueries.js"></script>
+		<![endif]-->
+		<title>[Lesson 9] 関数（２） | 問題集 | JavaScript 実習問題集</title>
+	</head>
+	<body>
+		<div class="sp_off">
+			<header id="main-head">
+				<div class="inner">
+					<div class="sitename">
+						<h1><a href="../../index.html">JavaScript 実習問題集</a></h1>
+					</div>
+					<nav class="sitenav">
+						<ul>
+							<li><a target="_top" href="../../index.html">トップページ</a></li>
+							<li><a target="_top" href="../../study/index.html">問題集</a></li>
+							<li><a target="_top" href="../../beginner-course/index.html">初心者向けコース</a></li>
+					</nav>
+				</div>
+			</header>
+
+			<main id="wrapper">
+				<nav class="pkz-list">
+					・ <a target="_top" href="../../index.html">トップページ</a> ＞ <a target="_top" href="../index.html">問題集</a> ＞ [Lesson 9] 関数（２）
+				</nav>
+				<br />
+
+				<h1 class="study-mds">[Lesson 9] 関数（２）</h1>
+				<hr class="size01_black" />
+				<strong>関数を使用し、空白文字列を表示しましょう。</strong><br /><br />
+				[　保存名　]　L09<br />
+				[　プログラム仕様書　]　空白文字列（スペース）を生成する関数を作る。<br />
+				[　実行イメージ　]<br />
+				<img src="../../common/img/L01.png" width="900px" height="346px">
+				<br /><br />
+				[コード入力手順]<br />
+				①　空白文字列を作成するspc(n)関数を作成する。<br />
+				　　・sの値をヌル文字列（なにもない文字列）に初期化する。<br />
+				　　・for分を使用してn回の繰り返しを行い空白文字を足していく。<br />
+				<div class="blank-space-frame" style="width:400px; height:100px; margin:5px 0 0 3px; padding-left: 30px;">
+					for(i=1;i&lt;n;i++){<br />
+					　　s=s+" ";<br />
+					　　return s;<br />
+				}
+				</div>
+				<br />
+				②　イメージファイル「a.gif」を表示する。<br />
+				③　for文の使用して「i」が1→3→5→7→9になるように繰り返し行う。<br />
+				④　関数spc(i)でi個分の空白文字列と作成し、「スペースi」とイメージファイルの間に表示させる。<br /><br />
+
+				<h2>ポイント</h2>
+				<hr class="size01_black" />
+				<strong>■ &lt;pre&gt;タグ</strong><br />
+				空白文字列が表示されないときは、&lt;pre&gt;タグを使います。<br />
+				&lt;pre&gt;タグはコードを記述した空白や改行をそのまま表示することができます。<br /><br />
+
+				<h2>追加練習</h2>
+				<hr class="size01_black" />
+				イメージファイル「<strong>b.gif</strong>」を使用し、空白文字列の減少表示を追加する。<br />
+				<br />
+				<p><big><strong>実行イメージ</strong></big></p>
+				<img src="../../common/img/L06-adst01.png" width="900px" height="253px">
+				<br /><br />
+
+				<h2>答え</h2>
+				<hr class="size01_black" />
+				分からなかった場合などは答えを見てみましょう。<br /><br />
+				<button class="answer-btn">L09の答えを開く</button>
+				<button class="answer-btn2">L09の答えを閉じる</button>
+				<div class="study-answer">
+<pre><code class="prettyprint linenums lang-js">
+&lt;script&gt;
+&lt;/script&gt;
+</code></pre>
+				</div>
+			</main>
+
+			<footer id="footer">
+				<div class="fdr-wrapper">
+					<center><p><a target="_top" href="../../index.html">トップページ</a> | <a target="_top" href="../../study/index.html">問題集</a> | <a target="_top" href="../../beginner-course/index.html">初心者向けコース</a></p></center>
+					<center><p>&copy; 2018 TOKYO ELECTRONICS COLLEGE</p></center>
+					<br />
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

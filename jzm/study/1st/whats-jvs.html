@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="robots" content="noindex,follow" />
+		<meta http-equiv="imagetoolbar" content="no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="format-detection" content="telephone=no" />
+		<link rel="stylesheet" href="../../common/css/style.css" />
+		<script src="../../common/js/jquery-3.2.1.min.js"></script>
+		<script src="../../common/js/jquery.sticky.js"></script>
+		<script src="../../common/js/footerFixed.js"></script>
+		<script src="../../common/js/def.js"></script>
+		<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+			<script src="https://raw.githubusercontent.com/livingston/css3-mediaqueries-js/master/css3-mediaqueries.js"></script>
+		<![endif]-->
+		<title>[概要] JavaScriptとは？ | 問題集 | JavaScript 実習問題集</title>
+	</head>
+	<body>
+		<div class="sp_off">
+			<header id="main-head">
+				<div class="inner">
+					<div class="sitename">
+						<h1><a href="../../index.html">JavaScript 実習問題集</a></h1>
+					</div>
+					<nav class="sitenav">
+						<ul>
+							<li><a target="_top" href="../../index.html">トップページ</a></li>
+							<li><a target="_top" href="../../study/index.html">問題集</a></li>
+							<li><a target="_top" href="../../beginner-course/index.html">初心者向けコース</a></li>
+					</nav>
+				</div>
+			</header>
+
+			<main id="wrapper">
+				<nav class="pkz-list">
+					・ <a target="_top" href="../../index.html">トップページ</a> ＞ <a target="_top" href="../index.html">問題集</a> ＞ [概要] JavaScriptとは？
+				</nav>
+				<br />
+				<h1 class="study-mds">[概要] JavaScriptとは？</h1>
+				<hr class="size01_black" />
+				JavaScriptとはNetScape社が開発したオブジェクト指向スクリプト言語です。<br />
+				スクリプト言語とは、HTMLの中に直接記述し、ブラウザが直接解釈するため、コンパイルの必要がありません。<br /><br />
+
+				<h2>記述例</h2>
+				<hr class="size01_black" />
+<pre><code class="prettyprint linenums">
+&lt;script language="JavaScript"&gt;
+	document.write("HTML文");
+&lt;/script&gt;
+</code></pre>
+				<br />
+				&lt;script language="JavaScript"&gt;が書き出しの文<br />
+				document.write("");で「HTML文」を囲み、文の終わりに;をつける<br />
+				&lt;/script&gt;で閉じる<br /><br />
+
+				<h2>注意点</h2>
+				<hr class="size01_black" />
+				<strong>■ 大文字・小文字を間違えない。</strong><br />
+				　　&lt;script&gt;～&lt;/script&gt;で囲まれた部分の入力には注意すること。<br /><br />
+				<strong>■ セミコロン（;）を命令の区切りとする。</strong><br />
+				　　例：document.write(❝Hello❞); alert(❝Hello❞);<br /><br />
+				<strong>■ &lt;script&gt;タグはHTMLファイルの中に何回でも記述できる。しかし、Webページ読込時にスクリプトを動作させたい場合は、&lt;body&gt;タグよりも先に書く。</strong><br /><br />
+				<strong>■ エラーがあった場合、Internet Explorerは行の表示をする。指定された行までにエラーがあることを示す。</strong><br /><br />
+				<strong>■ コメント</strong><br />
+				　　①　//　で記述した部分から行末までがコメントになる。<br />
+				　　② /*～*/　で囲んだ部分がコメントになる。<br />
+				　　（HTMLコメントは＜！--　　　--＞と書きます。）<br /><br />
+
+				<h2>コメントの記述方法</h2>
+				<hr class="size01_black" />
+				JavaScriptが動作しないブラウザにスクリプトをコメントのように見せて、エラーを発生しないようにする方法<br />
+<pre><code class="prettyprint linenums">
+&lt;script language="JavaScript"&gt;
+	&lt;!--
+		スクリプト文
+	--&gt;
+&lt;/script&gt;
+</code></pre>
+			<br />
+
+			<h2>JavaScriptで扱うデータ</h2>
+			<hr class="size01_black" />
+			<strong>● 数値</strong><br />
+			JavaScriptの数値型は、整数と、浮動小数点になります。<br />
+			他の言語から比べると分類が非常に少ないため、複雑な計算を行う場合問題が起こることがあります。<br />
+			小数点の精度は、OSやWebブラウザによって異なります。<br /><br />
+			<strong>● 文字列</strong><br />
+			文字列は0文字以上の文字を指します。文字列は❝　❞（ダブルクォーテーション）または❜　❜（シングルクォーテーション）で囲んで記述します。<br /><br />
+			<strong>● 理論値</strong><br />
+			理論値はデータの比較や判定の時に使用し、「true」（真）または「false」（偽）の値をいいます。「0」や「1」は論理地として使用していません。<br /><br />
+			<strong>● null値</strong><br />
+			JavaScriptでは、null値は「null」と指定します。
+			</main>
+
+			<footer id="footer">
+				<div class="fdr-wrapper">
+					<center><p><a target="_top" href="../../index.html">トップページ</a> | <a target="_top" href="../../study/index.html">問題集</a> | <a target="_top" href="../../beginner-course/index.html">初心者向けコース</a></p></center>
+					<center><p>&copy; 2018 TOKYO ELECTRONICS COLLEGE</p></center>
+					<br />
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

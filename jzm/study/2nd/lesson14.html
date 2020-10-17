@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="robots" content="noindex,follow" />
+		<meta http-equiv="imagetoolbar" content="no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="format-detection" content="telephone=no" />
+		<link rel="stylesheet" href="../../common/css/style.css" />
+		<style type="text/css">
+			table tr th,
+			table tr td {
+				padding: 0 10px;
+				border: 1px solid #000;
+				vertical-align: middle;
+			}
+			table tr th {
+				text-align: center;
+				font-weight: bold;
+			}
+			table td {
+				text-align: center;
+			}
+			table th {
+				background-color: #ccc;
+			}
+		</style>
+		<script src="../../common/js/jquery-3.2.1.min.js"></script>
+		<script src="../../common/js/jquery.sticky.js"></script>
+		<script src="../../common/js/footerFixed.js"></script>
+		<script src="../../common/js/def.js"></script>
+		<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+		<script>
+			$(function() {
+				$('.answer-btn').click(function(){
+					$('.study-answer').show();
+				});
+				$('.answer-btn2').click(function(){
+					$('.study-answer').hide();
+				});
+				$('.answer-btn3').click(function(){
+					$('.study-answer2').show();
+				});
+				$('.answer-btn4').click(function(){
+					$('.study-answer2').hide();
+				});
+			});
+		</script>
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+			<script src="https://raw.githubusercontent.com/livingston/css3-mediaqueries-js/master/css3-mediaqueries.js"></script>
+		<![endif]-->
+		<title>[Lesson 14] 配列（４） | 問題集 | JavaScript 実習問題集</title>
+	</head>
+	<body>
+		<div class="sp_off">
+			<header id="main-head">
+				<div class="inner">
+					<div class="sitename">
+						<h1><a href="../../index.html">JavaScript 実習問題集</a></h1>
+					</div>
+					<nav class="sitenav">
+						<ul>
+							<li><a target="_top" href="../../index.html">トップページ</a></li>
+							<li><a target="_top" href="../../study/index.html">問題集</a></li>
+							<li><a target="_top" href="../../beginner-course/index.html">初心者向けコース</a></li>
+					</nav>
+				</div>
+			</header>
+
+			<main id="wrapper">
+				<nav class="pkz-list">
+					・ <a target="_top" href="../../index.html">トップページ</a> ＞ <a target="_top" href="../index.html">問題集</a> ＞ [Lesson 14] 配列（４）
+				</nav>
+				<br />
+
+				<h1 class="study-mds">[Lesson 14] 配列（４）</h1>
+				<hr class="size01_black" />
+				<strong>配列を使用し、県庁所在地との検索・表示を行うプログラムを作成しましょう。</strong><br /><br />
+				[　保存名　]　L14<br />
+				[　プログラム仕様書　]　関東地域の県名と県庁所在地を配列に登録する。<br />
+				県名から県庁所在地を検索し、画面に表示させる。<br />
+				[　実行イメージ　]<br />
+				<img src="../../common/img/L01.png" width="900px" height="346px">
+				<br /><br />
+				[コード入力手順]<br />
+				①　県名の配列kを作成し、7つの県名を入れる<br />
+				　　・「茨城県」、「神奈川県」、「群馬県」、「埼玉県」、「千葉県」、「栃木県」、「山梨県」<br />
+				②　県庁所在地の配列を作成し、県庁所在地を入れる。<br />
+				　　・「水戸市」、「横浜市」、「前橋市」、「さいたま市」、「千葉市」、「宇都宮市」、「甲府市」<br />
+				③　変数nにname配列の総数を代入する。<br />
+				　　　　＜ヒント＞→　var n= name.length;<br />
+				④　kensaku(data)関数作成する。<br />
+				<div class="blank-space-frame" style="width:400px; height:145px; margin:5px 0 0 3px; padding-left: 10px;">
+					function kensaku(data){<br />
+					　　for(i=0;i&lt;n;i++){<br />
+					　　　　if(k[i]= = data) retrun s[i];<br />
+					　　}<br />
+					　　return "登録なし";<br />
+					｝
+				</div>
+				<br />
+				⑤　kenmei変数に登録した県名を代入し、kensaku()関数をkenmei関数で呼び出す。
+				<br /><br />
+
+				<h2>ポイント</h2>
+				<hr class="size01_black" />
+				<strong>■ lengthプロパティ</strong><br />
+				配列の各要素（実際にデータの入っている数）を獲得するには、lengthプロパティを使用します。<br />
+				name,lengthとすることで、name配列の要関数が取得できます。<br />
+				return total / n;<br /><br />
+
+				<h2>追加練習</h2>
+				<hr class="size01_black" />
+				人口の配列を追加して、人口を探索する関数を作成する。<br />
+				人口は下表を参考に作成する（単位：万人）。<br />
+				<table width="600" style="margin-top: 5px;">
+					<tr>
+						<td>茨城県</td>
+						<td>神奈川県</td>
+						<td>群馬県</td>
+						<td>埼玉県</td>
+						<td>千葉県</td>
+						<td>栃木県</td>
+						<td>山梨県</td>
+					</tr>
+					<tr>
+						<td>299</td>
+						<td>848</td>
+						<td>202</td>
+						<td>692</td>
+						<td>595</td>
+						<td>200</td>
+						<td>88</td>
+					</tr>
+				</table>
+				<br />
+				<p><big><strong>実行イメージ</strong></big></p>
+				<img src="../../common/img/L06-adst01.png" width="900px" height="253px">
+				<br /><br />
+
+				<h2>アドバイス</h2>
+				<hr class="size01_black" />
+				<big><strong>オブジェクト（配列）の数を取得する</strong></big><br />
+				プロパティやメソッドの中には、複数のオブジェクトで使用できるものがあります。<br />
+				lengthプロパティはHTMLファイル内のオブジェクトや配列の数を取得します。<br />
+				・サポートしているオブジェクトの一例<br />
+				<table width="400" style="margin-top: 5px;">
+					<tr>
+						<td>Button</td>
+						<td>Checkbox</td>
+						<td>Form</td>
+					</tr>
+					<tr>
+						<td>Frame</td>
+						<td>Image</td>
+						<td>Radio</td>
+					</tr>
+					<tr>
+						<td>Text</td>
+						<td>Textarea</td>
+						<td>Window</td>
+					</tr>
+				</table>
+				・サポートしている配列の一例<br />
+				<table width="400" style="margin-top: 5px;">
+					<tr>
+						<td>elements</td>
+						<td>forms</td>
+						<td>frames</td>
+					</tr>
+					<tr>
+						<td>images</td>
+						<td>links</td>
+						<td>options</td>
+					</tr>
+				</table>
+				<br />
+				＜例＞<br />
+				var moji="あいうえお";<br />
+				　　document.write("文字の数",moji.length,"&lt;br /&gt;");<br />
+				　　document.write("リンクの数",document.links.length,"&lt;br /&gt;");<br />
+				　　document.write("フォームの数",document.forms.length,"&lt;br /&gt;");
+				<br /><br />
+
+				<h2>答え</h2>
+				<hr class="size01_black" />
+				分からなかった場合などは答えを見てみましょう。<br /><br />
+				<button class="answer-btn">L14の答えを開く</button>
+				<button class="answer-btn2">L14の答えを閉じる</button>
+				<div class="study-answer">
+<pre><code class="prettyprint linenums lang-js">
+&lt;script&gt;
+&lt;/script&gt;
+</code></pre>
+				</div>
+			</main>
+
+			<footer id="footer">
+				<div class="fdr-wrapper">
+					<center><p><a target="_top" href="../../index.html">トップページ</a> | <a target="_top" href="../../study/index.html">問題集</a> | <a target="_top" href="../../beginner-course/index.html">初心者向けコース</a></p></center>
+					<center><p>&copy; 2018 TOKYO ELECTRONICS COLLEGE</p></center>
+					<br />
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

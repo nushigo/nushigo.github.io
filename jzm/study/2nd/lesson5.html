@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="robots" content="noindex,follow" />
+		<meta http-equiv="imagetoolbar" content="no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="format-detection" content="telephone=no" />
+		<link rel="stylesheet" href="../../common/css/style.css" />
+		<style type="text/css">
+			table tr th,
+			table tr td {
+				padding: 0 10px;
+				border: 1px solid #000;
+				vertical-align: middle;
+			}
+			table tr th {
+				text-align: center;
+				font-weight: bold;
+			}
+			table td {
+				text-align: center;
+			}
+			table th {
+				background-color: #ccc;
+			}
+		</style>
+		<script src="../../common/js/jquery-3.2.1.min.js"></script>
+		<script src="../../common/js/jquery.sticky.js"></script>
+		<script src="../../common/js/footerFixed.js"></script>
+		<script src="../../common/js/def.js"></script>
+		<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+		<script>
+			$(function() {
+				$('.answer-btn').click(function(){
+					$('.study-answer').show();
+				});
+				$('.answer-btn2').click(function(){
+					$('.study-answer').hide();
+				});
+				$('.answer-btn3').click(function(){
+					$('.study-answer2').show();
+				});
+				$('.answer-btn4').click(function(){
+					$('.study-answer2').hide();
+				});
+			});
+		</script>
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+			<script src="https://raw.githubusercontent.com/livingston/css3-mediaqueries-js/master/css3-mediaqueries.js"></script>
+		<![endif]-->
+		<title>[Lesson 5] 変数 | 問題集 | JavaScript 実習問題集</title>
+	</head>
+	<body>
+		<div class="sp_off">
+			<header id="main-head">
+				<div class="inner">
+					<div class="sitename">
+						<h1><a href="../../index.html">JavaScript 実習問題集</a></h1>
+					</div>
+					<nav class="sitenav">
+						<ul>
+							<li><a target="_top" href="../../index.html">トップページ</a></li>
+							<li><a target="_top" href="../../study/index.html">問題集</a></li>
+							<li><a target="_top" href="../../beginner-course/index.html">初心者向けコース</a></li>
+					</nav>
+				</div>
+			</header>
+
+			<main id="wrapper">
+				<nav class="pkz-list">
+					・ <a target="_top" href="../../index.html">トップページ</a> ＞ <a target="_top" href="../index.html">問題集</a> ＞ [Lesson 5] 変数
+				</nav>
+				<br />
+				<h1 class="study-mds">[Lesson 5] 変数</h1>
+				<hr class="size01_black" />
+				<strong>変数を使用したプログラムを作成しましょう。</strong><br /><br />
+				[　保存名　]　L05<br />
+				[　プログラム仕様書　]　変数を作成し、変数を使用した計算を行う。<br />
+				[　実行イメージ　]<br />
+				<img src="../../common/img/L05.png" width="900px" height="283px">
+				<br /><br />
+				[コード入力手順]<br />
+				①　変数keisan1を作成し、「3」に「10」を足したものを代入する。<br />
+				　　　　＜ヒント＞→　keisan=3+10;<br />
+				②　変数keisan2を作成し、「3」から「10」を引いたものを代入する。<br />
+				③　②と同じ処理を*,/,%でも行う。<br />
+				④　算術演算子を使用して、計算を行い表示させる。<br /><br />
+
+				<h2>ポイント</h2>
+				<hr class="size01_black" />
+				<strong>■ 変数</strong><br />
+				変数はある値を入れることのできる名前の付いた箱のようなものです。<br />
+				変数にある値を入れることを「代入」といいます。<br />
+				JavaScriptでは、変数にどんな型のデータでも格納できます。この変数を作ることを「変数の宣言」といい、以下のように記述します。<br />
+				var i;<br />
+				「var」はvariable（変数）の意味で、メモリ上に「i」という名前の変数を作成したことになります。<br /><br />
+				<strong>■ 変数に値を代入する</strong><br />
+				var i = 10;<br />
+				変数「i」を宣言するとともに、「i」に数値の10を代入します。<br />
+				プログラムの「=」は右辺を左辺に代入するという意味です。<br />
+				また、JavaScriptでは「var」を宣言せずに変数を使用することができます。<br /><br />
+				<strong>■ 変数の名前</strong><br />
+				変数の名前は大文字と小文字を区別します。<br />
+				英字、アンダースコア（_）、数字を組み合わせて使えますが、変数名の先頭文字は英語かアンダースコアにします。<br />
+				以下の予約語（JavaScriptがプログラムのキーワードとして使用するもの）は変数名に使用できません。<br />
+				break , case , catch , continue , default , delete , do , else, finally , for , function , if , in , instanceof , new , return , switch , this , throw , try , typeof , var , void , while , with<br /><br />
+				<strong>■ 算術演算子</strong><br />
+				<center>
+					<table width="400" style="margin-top: 5px;">
+						<tr>
+							<th>値</th>
+							<th>内　容</th>
+						</tr>
+						<tr>
+							<td>a+b</td>
+							<td>a足すb</td>
+						</tr>
+						<tr>
+							<td>a-b</td>
+							<td>a引くb</td>
+						</tr>
+						<tr>
+							<td>a*b</td>
+							<td>a掛けるb</td>
+						</tr>
+						<tr>
+							<td>a/b</td>
+							<td>a割るb</td>
+						</tr>
+						<tr>
+							<td>a%b</td>
+							<td>a割るbの余り</td>
+						</tr>
+					</table>
+				</center>
+				<br />
+
+				<h2>答え</h2>
+				<hr class="size01_black" />
+				分からなかった場合などは答えを見てみましょう。<br /><br />
+				<button class="answer-btn">L05の答えを開く</button>
+				<button class="answer-btn2">L05の答えを閉じる</button>
+				<div class="study-answer">
+<pre><code class="prettyprint linenums lang-js">
+&lt;script&gt;
+var keisan1=3+10;
+var keisan2=3-10;
+var keisan3=3*10;
+var keisan4=3/10;
+var keisan5=3%10;
+
+document.write("3+10=",keisan1,"&lt;br /&gt;");
+document.write("3-10=",keisan2,"&lt;br /&gt;");
+document.write("3×10=",keisan3,"&lt;br /&gt;");
+document.write("3÷10=",keisan4,"&lt;br /&gt;");
+document.write("3÷10の余りは",keisan5,"です&lt;br /&gt;");
+&lt;/script&gt;
+</code></pre>
+				</div>
+			</main>
+
+			<footer id="footer">
+				<div class="fdr-wrapper">
+					<center><p><a target="_top" href="../../index.html">トップページ</a> | <a target="_top" href="../../study/index.html">問題集</a> | <a target="_top" href="../../beginner-course/index.html">初心者向けコース</a></p></center>
+					<center><p>&copy; 2018 TOKYO ELECTRONICS COLLEGE</p></center>
+					<br />
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

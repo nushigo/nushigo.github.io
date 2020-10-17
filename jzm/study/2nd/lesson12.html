@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="robots" content="noindex,follow" />
+		<meta http-equiv="imagetoolbar" content="no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="format-detection" content="telephone=no" />
+		<link rel="stylesheet" href="../../common/css/style.css" />
+		<style type="text/css">
+			table tr th,
+			table tr td {
+				padding: 0 10px;
+				border: 1px solid #000;
+				vertical-align: middle;
+			}
+			table tr th {
+				text-align: center;
+				font-weight: bold;
+			}
+			table td {
+				text-align: center;
+			}
+			table th {
+				background-color: #ccc;
+			}
+		</style>
+		<script src="../../common/js/jquery-3.2.1.min.js"></script>
+		<script src="../../common/js/jquery.sticky.js"></script>
+		<script src="../../common/js/footerFixed.js"></script>
+		<script src="../../common/js/def.js"></script>
+		<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+		<script>
+			$(function() {
+				$('.answer-btn').click(function(){
+					$('.study-answer').show();
+				});
+				$('.answer-btn2').click(function(){
+					$('.study-answer').hide();
+				});
+				$('.answer-btn3').click(function(){
+					$('.study-answer2').show();
+				});
+				$('.answer-btn4').click(function(){
+					$('.study-answer2').hide();
+				});
+			});
+		</script>
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+			<script src="https://raw.githubusercontent.com/livingston/css3-mediaqueries-js/master/css3-mediaqueries.js"></script>
+		<![endif]-->
+		<title>[Lesson 12] 配列（２） | 問題集 | JavaScript 実習問題集</title>
+	</head>
+	<body>
+		<div class="sp_off">
+			<header id="main-head">
+				<div class="inner">
+					<div class="sitename">
+						<h1><a href="../../index.html">JavaScript 実習問題集</a></h1>
+					</div>
+					<nav class="sitenav">
+						<ul>
+							<li><a target="_top" href="../../index.html">トップページ</a></li>
+							<li><a target="_top" href="../../study/index.html">問題集</a></li>
+							<li><a target="_top" href="../../beginner-course/index.html">初心者向けコース</a></li>
+					</nav>
+				</div>
+			</header>
+
+			<main id="wrapper">
+				<nav class="pkz-list">
+					・ <a target="_top" href="../../index.html">トップページ</a> ＞ <a target="_top" href="../index.html">問題集</a> ＞ [Lesson 12] 配列（２）
+				</nav>
+				<br />
+
+				<h1 class="study-mds">[Lesson 12] 配列（２）</h1>
+				<hr class="size01_black" />
+				<strong>色の配列を作成し、表示しましょう。</strong><br /><br />
+				[　保存名　]　L12<br />
+				[　プログラム仕様書　]　色の配列を7つ作成し、それぞれ色を代入する。for文を使用し、色の配列を表示する。<br />
+				[　実行イメージ　]<br />
+				<img src="../../common/img/L12.png" width="900px" height="434px">
+				<br /><br />
+				[コード入力手順]<br />
+				①　背景色を「lightgreen」<br />
+				②　配列colで8色の色の配列を作成する。<br />
+				③　配列には「blue」、「green」、「cyan」、「orange」、「red」、「pink」、「purple」、「yellow」を代入する。<br />
+				④　for文を使用し、&lt;font&gt;タグのcolor属性に配列col[i]を表示することを8回繰り返す。<br /><br />
+
+				<h2>ポイント</h2>
+				<hr class="size01_black" />
+				<strong>■ 色の指定</strong><br />
+				ここでは「配列」に色名を使用しています。<br />
+				ほかにいろ子弟はRGB16真数とRGB256進数方式があります。<br /><br />
+				<strong>■ 色の指定</strong><br />
+				JavaScriptでは色名、RGB16進数、RGB25進数の3種類の方法で色の指定ができます。<br />
+				詳しくは巻末の「補足」を参照してください。<br />
+				<table width="400" style="margin-top: 5px;">
+					<tr>
+						<th>色　名</th>
+						<th>RGB16進数<br />#RRGGBB</th>
+						<th>RGB256進数<br />(R,G,B)</th>
+					</tr>
+					<tr>
+						<td>lightgreen</td>
+						<td>#90EE90</td>
+						<td>(144,238,144)</td>
+					</tr>
+					<tr>
+						<td>blue</td>
+						<td>#0000FF</td>
+						<td>(0,0,255)</td>
+					</tr>
+					<tr>
+						<td>green</td>
+						<td>#008000</td>
+						<td>(0,128,0)</td>
+					</tr>
+					<tr>
+						<td>cyan</td>
+						<td>#00FFFF</td>
+						<td>(0,255,255)</td>
+					</tr>
+					<tr>
+						<td>orange</td>
+						<td>#FFA500</td>
+						<td>(255,165,0)</td>
+					</tr>
+					<tr>
+						<td>red</td>
+						<td>#FF0000</td>
+						<td>(255,0,0)</td>
+					</tr>
+					<tr>
+						<td>pink</td>
+						<td>#FFC0CB</td>
+						<td>(255,192,203)</td>
+					</tr>
+					<tr>
+						<td>purple</td>
+						<td>#800080</td>
+						<td>(128,0,128)</td>
+					</tr>
+					<tr>
+						<td>yellow</td>
+						<td>#FFFF00</td>
+						<td>(255,255,0)</td>
+					</tr>
+				</table>
+				<br />
+
+				<h2>答え</h2>
+				<hr class="size01_black" />
+				分からなかった場合などは答えを見てみましょう。<br /><br />
+				<button class="answer-btn">L12の答えを開く</button>
+				<button class="answer-btn2">L12の答えを閉じる</button>
+				<div class="study-answer">
+<pre><code class="prettyprint linenums lang-js">
+&lt;script&gt;
+var i=null;
+var col=["blue","green","cyan","orange","red","pink","purple","yellow"];
+document.write("&lt;style&gt;body{ background-color: lightgreen; }&lt;/style&gt;");
+document.write("&lt;br /&gt;");
+for(var i=0;i<=7;i++){
+	document.write("&lt;font color="+col[i]+"&gt;◆文字色は・・・・・"+col[i]+"です&lt;/font&gt;");
+	document.write("&lt;br /&gt;");
+}
+&lt;/script&gt;
+</code></pre>
+				</div>
+			</main>
+
+			<footer id="footer">
+				<div class="fdr-wrapper">
+					<center><p><a target="_top" href="../../index.html">トップページ</a> | <a target="_top" href="../../study/index.html">問題集</a> | <a target="_top" href="../../beginner-course/index.html">初心者向けコース</a></p></center>
+					<center><p>&copy; 2018 TOKYO ELECTRONICS COLLEGE</p></center>
+					<br />
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

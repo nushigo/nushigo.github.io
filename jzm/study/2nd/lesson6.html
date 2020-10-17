@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="robots" content="noindex,follow" />
+		<meta http-equiv="imagetoolbar" content="no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="format-detection" content="telephone=no" />
+		<link rel="stylesheet" href="../../common/css/style.css" />
+		<style type="text/css">
+			table tr th,
+			table tr td {
+				padding: 0 10px;
+				border: 1px solid #000;
+				vertical-align: middle;
+			}
+			table tr th {
+				text-align: center;
+				font-weight: bold;
+			}
+			table td {
+				text-align: center;
+			}
+			table th {
+				background-color: #ccc;
+			}
+		</style>
+		<script src="../../common/js/jquery-3.2.1.min.js"></script>
+		<script src="../../common/js/jquery.sticky.js"></script>
+		<script src="../../common/js/footerFixed.js"></script>
+		<script src="../../common/js/def.js"></script>
+		<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+		<script>
+			$(function() {
+				$('.answer-btn').click(function(){
+					$('.study-answer').show();
+				});
+				$('.answer-btn2').click(function(){
+					$('.study-answer').hide();
+				});
+				$('.answer-btn3').click(function(){
+					$('.study-answer2').show();
+				});
+				$('.answer-btn4').click(function(){
+					$('.study-answer2').hide();
+				});
+			});
+		</script>
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+			<script src="https://raw.githubusercontent.com/livingston/css3-mediaqueries-js/master/css3-mediaqueries.js"></script>
+		<![endif]-->
+		<title>[Lesson 6] if～else 文（１） | 問題集 | JavaScript 実習問題集</title>
+	</head>
+	<body>
+		<div class="sp_off">
+			<header id="main-head">
+				<div class="inner">
+					<div class="sitename">
+						<h1><a href="../../index.html">JavaScript 実習問題集</a></h1>
+					</div>
+					<nav class="sitenav">
+						<ul>
+							<li><a target="_top" href="../../index.html">トップページ</a></li>
+							<li><a target="_top" href="../../study/index.html">問題集</a></li>
+							<li><a target="_top" href="../../beginner-course/index.html">初心者向けコース</a></li>
+					</nav>
+				</div>
+			</header>
+
+			<main id="wrapper">
+				<nav class="pkz-list">
+					・ <a target="_top" href="../../index.html">トップページ</a> ＞ <a target="_top" href="../index.html">問題集</a> ＞ [Lesson 6] if～else 文（１）
+				</nav>
+				<br />
+				<h1 class="study-mds">[Lesson 6] if～else 文（１）</h1>
+				<hr class="size01_black" />
+				<strong>if文の条件分岐と%演算子を使用し、文字列を表示しましょう。</strong><br /><br />
+				[　保存名　]　L06<br />
+				[　プログラム仕様書　]　文字列「こんにちは」と「ニーハオ」を交互に6回繰り返して表示する。<br />
+				交互の判定はif文と%演算子を使用する。<br />
+				[　実行イメージ　]<br />
+				<img src="../../common/img/L06.png" width="900px" height="253px">
+				<br /><br />
+				[コード入力手順]<br />
+				①　for文を使用し、「i」を6回繰り返し、改行を行う。<br />
+				②　「i」を2で割った余りが「0」の時には「こんにちは」を表示する。<br />
+				　　　　＜ヒント＞→　if(i%2==0)<br />
+				　　　　　　　　　　　　document.write("こんにちは");<br />
+				③　それ以外は、「ニーハオ」と表示する。<br /><br />
+
+				<h2>アドバイス</h2>
+				<hr class="size01_black" />
+				<big><strong>剰余</strong></big><br />
+				剰余（%）とifを使用すると条件判定の繰り返しが容易に行えます。<br />
+				例えば、「i」が0～10の数値の繰り返しの場合は、<br />
+				「i%2」は「0」、「1」の繰り返しになり、「0」の時は…「1」の時は…と条件分岐が行えます。<br />
+				「i%3」は「0」、「１」、「２」の繰り返しになります。<br /><br />
+
+				<h2>ポイント</h2>
+				<hr class="size01_black" />
+				<strong>■ if文</strong><br />
+				if文は複数処理に条件をつけたいときに使用します。<br />
+				人間の行動だと、例えば500円のものをフリーマーケットで発売するとします。<br />その場合「500円以上なら、お釣りを返す」、「500円なら商品を渡す」、「500円以下はお断り」の様に対応していくと思います。<br />
+				そのように条件毎に違う処理をコンピューターにやってもらうために指示するためのコードがif文なのです。
+				<br /><br />
+				<strong>■ else文</strong><br />
+				else文はif文で指示した条件の対象にならなかった際に行う処理を記載するために使用します。<br />
+				if文の説明で例として挙げた「人間の行動」で例えると、「500円以下はお断り」の対応にあたります。<br />
+				if文は条件をつけた処理、else文は対象外の処理と覚えると分かりやすいでしょう。
+				<br /><br />
+				<strong>■ if文の書き方基本形</strong><br />
+				<div class="blank-space-frame" style="width:400px; height:220px; margin:5px 0 0 3px; padding-left: 30px;">
+					if(条件1){<br />
+					　　条件1が真のときに行う処理;<br />
+					}<br />
+					else if(条件2){<br />
+					　　条件2が真のときに行う処理;<br />
+					}<br />
+					else {<br />
+					　　条件1、条件2に合わない場合の処理;<br />
+					}<br />
+				</div>
+				<br /><br />
+				<strong>■ 比較演算子</strong><br />
+				<center>
+					<table width="400" style="margin-top: 5px;">
+						<tr>
+							<th>例</th>
+							<th>内　容</th>
+						</tr>
+						<tr>
+							<td>a==b</td>
+							<td>aとbが等しい</td>
+						</tr>
+						<tr>
+							<td>a!=b</td>
+							<td>aとbが等しくない</td>
+						</tr>
+						<tr>
+							<td>a&gt;b</td>
+							<td>aがbより大きい</td>
+						</tr>
+						<tr>
+							<td>a&lt;b</td>
+							<td>aがbより小さい</td>
+						</tr>
+						<tr>
+							<td>a&lt;=b</td>
+							<td>aがb以上</td>
+						</tr>
+						<tr>
+							<td>a&gt;=b</td>
+							<td>aがb以下</td>
+						</tr>
+					</table>
+				</center>
+				<br />
+
+				<h2>追加練習</h2>
+				<hr class="size01_black" />
+				文字列「こんにちは」と「ニーハオ」と「アンニョンハセヨ」を交互に6行表示する。<br />
+				<br />
+				<p><big><strong>実行イメージ</strong></big></p>
+				<img src="../../common/img/L06-adst01.png" width="900px" height="253px">
+				<br /><br />
+
+				<h2>答え</h2>
+				<hr class="size01_black" />
+				分からなかった場合などは答えを見てみましょう。<br /><br />
+				<button class="answer-btn">L06の答えを開く</button>
+				<button class="answer-btn2">L06の答えを閉じる</button>
+				<div class="study-answer">
+<pre><code class="prettyprint linenums lang-js">
+&lt;script&gt;
+for(var i=0;i<6;i++){
+	if(i%2==0){
+		document.write("こんにちは&lt;br /&gt;");
+	}
+	else{
+		document.write("ニーハオ&lt;br /&gt;");
+	}
+}
+&lt;/script&gt;
+</code></pre>
+				</div>
+				<br /><br />
+				<button class="answer-btn3">L06 演習問題の答えを開く</button>
+				<button class="answer-btn4">L06 演習問題の答えを閉じる</button>
+				<div class="study-answer2">
+<pre><code class="prettyprint linenums lang-js">
+&lt;script&gt;
+for(var i=0;i<2;i++){
+	if(i<2){
+		document.write("こんにちは&lt;br /&gt;");
+		document.write("ニーハオ&lt;br /&gt;");
+		document.write("アンニョンハセヨ&lt;br /&gt;");
+	}
+}
+&lt;/script&gt;
+</code></pre>
+				</div>
+			</main>
+
+			<footer id="footer">
+				<div class="fdr-wrapper">
+					<center><p><a target="_top" href="../../index.html">トップページ</a> | <a target="_top" href="../../study/index.html">問題集</a> | <a target="_top" href="../../beginner-course/index.html">初心者向けコース</a></p></center>
+					<center><p>&copy; 2018 TOKYO ELECTRONICS COLLEGE</p></center>
+					<br />
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

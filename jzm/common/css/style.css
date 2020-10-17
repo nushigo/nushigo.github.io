@@ -1,0 +1,265 @@
+/**
+Name: Site Style
+Version:0.2.5
+Last Update: 2017/11/06
+Url:
+**/
+
+/* Import */
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+@import url(https://jmblog.github.io/color-themes-for-google-code-prettify/themes/github.min.css);
+
+/* Default */
+
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h11, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+   letter-spacing: 1px;
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr1 {
+    display:block;
+    height:1px;
+    border:0;
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+@media screen and (min-width: 769px) {
+
+/* Default Main */
+
+* {zoom:1;}
+
+body {
+	width:100%;
+	height:100%;
+	font-size:16px;
+	font-family:Lato, "Noto Sans JP", "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	min-width:1000px;
+	min-height:100%;
+	display:block;
+	line-height:1.5em;
+	letter-spacing:0.5pt;
+	word-break: break-all;
+	-webkit-text-size-adjust:none;
+	overflow-y: scroll;
+}
+
+a {text-decoration:none; vertical-align: bottom;}
+a:hover {text-decoration: underline;}
+
+::selection {background:#000; color:#fff;}
+::-moz-selection {background:#000; color:#fff;}
+
+/** header,main,footer等のHTML5タグで「margin:0 auto;」を使うと
+IEでは認識しないので「display:block;」を使ってブロック要素にしておく。 **/
+main { display:block; }
+
+/* Header */
+
+#main-head{
+	width:100%;
+	height:60px;
+	padding-top:15px;
+	color:#FFF;
+	background-color:rgba(0, 0, 0, 0.8);
+	line-height: 1;
+}
+
+#main-head .sitename {
+	float:left;
+	width:auto;
+	height:130%;
+	margin:0 0 0px 0;
+}
+
+#main-head .sitenav {
+	position:absolute;
+	right:0;
+	top:30px;
+	margin-right:10px;
+}
+
+#main-head li {
+	display:inline-block;
+	padding-right:30px;
+}
+
+#main-head a {text-decoration:none; vertical-align:text-bottom;}
+#main-head a:link {color:#ffffff;}
+#main-head a:visited {color:#ffffff;}
+#main-head a:hover {color:#ffa500;}
+#main-head a:active {color:#ffffff;}
+
+#main-head h1 {
+	font-size:160%;
+	padding: 5px 15px;
+	margin: 5px 0 0 0;
+}
+
+/* Main Content */
+
+#wrapper {
+	width:900px;
+	height:100%;
+	margin:0 auto;
+	display: block;
+	padding:10px 0 30px 0;
+}
+
+.pkz-list {font-weight:bold;}
+
+hr.size01_black {
+	border-width:1px 0px 0px 0px;
+	border-style:solid;
+	border-color:black;
+	height:1px;
+}
+
+h1.study-mds {
+	font-size:180%;
+	padding: 5px 5px;
+	margin: 5px 0 0 0;
+}
+
+h2 {
+	font-size:150%;
+	padding: 5px 15px;
+	margin: 5px 0 0 0;
+}
+
+.blank-space-frame {
+	border:1px solid #000;
+}
+
+.study-answer,.study-answer2 {
+	display: none;
+}
+
+/* Footer */
+
+#footer {
+	width:100%;
+	height:100%;
+	color:#ffffff;
+	background:#000000;
+	text-align:center;
+}
+
+#footer a {text-decoration:none; vertical-align:text-bottom;}
+#footer a:link {color:#ffffff;}
+#footer a:visited {color:#ffffff;}
+#footer a:hover {color:#ffa500;}
+#footer a:active {color:#ffffff;}
+
+#footer ::selection {background:#fff; color:#000;}
+#footer ::-moz-selection {background:#fff; color:#000;}
+
+#footer p {padding:10px;}
+
+.fdr-wrapper {
+	width:900px;
+	height:100%;
+	margin:0 auto;
+	padding:10px 0 5px 0;
+}
+}
+
+@media screen and (max-width: 768px) {
+	.sp_off{display:none;}
+
+	.pkz-list {font-weight:bold;}
+}

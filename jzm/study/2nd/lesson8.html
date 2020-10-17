@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="robots" content="noindex,follow" />
+		<meta http-equiv="imagetoolbar" content="no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="format-detection" content="telephone=no" />
+		<link rel="stylesheet" href="../../common/css/style.css" />
+		<style type="text/css">
+			table tr th,
+			table tr td {
+				padding: 0 10px;
+				border: 1px solid #000;
+				vertical-align: middle;
+			}
+			table tr th {
+				text-align: center;
+				font-weight: bold;
+			}
+			table td {
+				text-align: center;
+			}
+			table th {
+				background-color: #ccc;
+			}
+		</style>
+		<script src="../../common/js/jquery-3.2.1.min.js"></script>
+		<script src="../../common/js/jquery.sticky.js"></script>
+		<script src="../../common/js/footerFixed.js"></script>
+		<script src="../../common/js/def.js"></script>
+		<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+		<script>
+			$(function() {
+				$('.answer-btn').click(function(){
+					$('.study-answer').show();
+				});
+				$('.answer-btn2').click(function(){
+					$('.study-answer').hide();
+				});
+				$('.answer-btn3').click(function(){
+					$('.study-answer2').show();
+				});
+				$('.answer-btn4').click(function(){
+					$('.study-answer2').hide();
+				});
+			});
+		</script>
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+			<script src="https://raw.githubusercontent.com/livingston/css3-mediaqueries-js/master/css3-mediaqueries.js"></script>
+		<![endif]-->
+		<title>[Lesson 8] 関数（１） | 問題集 | JavaScript 実習問題集</title>
+	</head>
+	<body>
+		<div class="sp_off">
+			<header id="main-head">
+				<div class="inner">
+					<div class="sitename">
+						<h1><a href="../../index.html">JavaScript 実習問題集</a></h1>
+					</div>
+					<nav class="sitenav">
+						<ul>
+							<li><a target="_top" href="../../index.html">トップページ</a></li>
+							<li><a target="_top" href="../../study/index.html">問題集</a></li>
+							<li><a target="_top" href="../../beginner-course/index.html">初心者向けコース</a></li>
+					</nav>
+				</div>
+			</header>
+
+			<main id="wrapper">
+				<nav class="pkz-list">
+					・ <a target="_top" href="../../index.html">トップページ</a> ＞ <a target="_top" href="../index.html">問題集</a> ＞ [Lesson 8] 関数（１）
+				</nav>
+				<br />
+
+				<h1 class="study-mds">[Lesson 8] 関数（１）</h1>
+				<hr class="size01_black" />
+				<strong>関数を使用し、円の面積を算出するプログラムを作成しましょう。</strong><br /><br />
+				[　保存名　]　L08<br />
+				[　プログラム仕様書　]　円の面積（半径×半径×3.14）を算出する関数を作成する。<br />
+				[　実行イメージ　]<br />
+				<img src="../../common/img/L08.png" width="900px" height="185px">
+				<br /><br />
+				[コード入力手順]<br />
+				①　指定した半径で円の面積を計算するen(n)関数を作成する。<br />
+				　　・関数en(n)を作成する。<br />
+				　　・面積を計算して、menseki変数に代入する。（半径＊半径＊3.14）<br />
+				　　・関数の戻り値に<strong>menseki</strong>を設定する。<br /><br />
+				②　変数iを用意し、半径を指定する。<br />
+				　　・var i=5;<br /><br />
+				③　en( )関数を引数「i」で計算する。<br />
+				　　　　＜ヒント＞→　en(i)<br /><br />
+
+				<h2>ポイント</h2>
+				<hr class="size01_black" />
+				<strong>■ 関数の作成</strong><br />
+				関数とは一連の処理をまとめて後で使えるようにしたもの。<br />処理単位ごとに関数を作成し、呼び出せるようにしておくと、メンテナンスも容易です。<br />
+				関数の定義の書式は以下のとおりです。<br />
+				<div class="blank-space-frame" style="width:400px; height:100px; margin:5px 0 0 3px; padding-left: 30px;">
+					function 関数名(引数){<br />
+					　　　　処理;<br />
+					　　　　return 戻り値;<br />
+				}
+				</div>
+				<br />
+				<strong>■ 変数の呼び出し</strong><br />
+				関数は「変数名(引数)」で呼び出します。<br />
+				例：en(i)<br />
+				<br />
+				<strong>■ 関数の戻り値</strong><br />
+				関数には処理を実行するだけの関数と、処理を実行した後値を返す関数があります。<br />
+				値を返す関数は帰ってくる値（戻り値）の設定が必要です。<br />
+				例えば、今回のem( )関数は面積を戻り値としています。<br />
+				<br />
+
+				<h2>答え</h2>
+				<hr class="size01_black" />
+				分からなかった場合などは答えを見てみましょう。<br /><br />
+				<button class="answer-btn">L08の答えを開く</button>
+				<button class="answer-btn2">L08の答えを閉じる</button>
+				<div class="study-answer">
+<pre><code class="prettyprint linenums lang-js">
+&lt;script&gt;
+var i=5;
+var menseki;
+function en(n){
+	menseki=i*i*3.14;
+	return menseki;
+}
+en(i);
+document.write("半径"+i+"cmの円の面積は"+menseki+"㎡です");
+document.write("&lt;hr /&gt;");
+&lt;/script&gt;
+</code></pre>
+				</div>
+			</main>
+
+			<footer id="footer">
+				<div class="fdr-wrapper">
+					<center><p><a target="_top" href="../../index.html">トップページ</a> | <a target="_top" href="../../study/index.html">問題集</a> | <a target="_top" href="../../beginner-course/index.html">初心者向けコース</a></p></center>
+					<center><p>&copy; 2018 TOKYO ELECTRONICS COLLEGE</p></center>
+					<br />
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

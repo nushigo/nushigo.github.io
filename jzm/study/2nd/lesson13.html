@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="robots" content="noindex,follow" />
+		<meta http-equiv="imagetoolbar" content="no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="format-detection" content="telephone=no" />
+		<link rel="stylesheet" href="../../common/css/style.css" />
+		<style type="text/css">
+			table tr th,
+			table tr td {
+				padding: 0 10px;
+				border: 1px solid #000;
+				vertical-align: middle;
+			}
+			table tr th {
+				text-align: center;
+				font-weight: bold;
+			}
+			table td {
+				text-align: center;
+			}
+			table th {
+				background-color: #ccc;
+			}
+		</style>
+		<script src="../../common/js/jquery-3.2.1.min.js"></script>
+		<script src="../../common/js/jquery.sticky.js"></script>
+		<script src="../../common/js/footerFixed.js"></script>
+		<script src="../../common/js/def.js"></script>
+		<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+		<script>
+			$(function() {
+				$('.answer-btn').click(function(){
+					$('.study-answer').show();
+				});
+				$('.answer-btn2').click(function(){
+					$('.study-answer').hide();
+				});
+				$('.answer-btn3').click(function(){
+					$('.study-answer2').show();
+				});
+				$('.answer-btn4').click(function(){
+					$('.study-answer2').hide();
+				});
+			});
+		</script>
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+			<script src="https://raw.githubusercontent.com/livingston/css3-mediaqueries-js/master/css3-mediaqueries.js"></script>
+		<![endif]-->
+		<title>[Lesson 13] 配列（３） | 問題集 | JavaScript 実習問題集</title>
+	</head>
+	<body>
+		<div class="sp_off">
+			<header id="main-head">
+				<div class="inner">
+					<div class="sitename">
+						<h1><a href="../../index.html">JavaScript 実習問題集</a></h1>
+					</div>
+					<nav class="sitenav">
+						<ul>
+							<li><a target="_top" href="../../index.html">トップページ</a></li>
+							<li><a target="_top" href="../../study/index.html">問題集</a></li>
+							<li><a target="_top" href="../../beginner-course/index.html">初心者向けコース</a></li>
+					</nav>
+				</div>
+			</header>
+
+			<main id="wrapper">
+				<nav class="pkz-list">
+					・ <a target="_top" href="../../index.html">トップページ</a> ＞ <a target="_top" href="../index.html">問題集</a> ＞ [Lesson 13] 配列（３）
+				</nav>
+				<br />
+
+				<h1 class="study-mds">[Lesson 13] 配列（３）</h1>
+				<hr class="size01_black" />
+				<strong>配列を使用し、テストの平均点を算出するプログラムを作成しましょう。</strong><br /><br />
+				[　保存名　]　L13<br />
+				[　プログラム仕様書　]　平均点を求める関数を作成する。<br />
+				配列で5回のテストの点数を作成し、関数に配列のデータを返して平均点を計算する。<br />
+				[　実行イメージ　]<br />
+				<img src="../../common/img/L01.png" width="900px" height="346px">
+				<br /><br />
+				[コード入力手順]<br />
+				①　heikin(d,n)関数を作成する。<br />
+				<div class="blank-space-frame" style="width:400px; height:170px; margin:5px 0 0 3px; padding-left: 10px;">
+					function heikin(d,n){<br />
+					　　if(n&lt;=0){<br />
+					　　　　total=0;<br />
+					　　　　for(i=0;i&lt;n;i++) total += d[i];<br />
+					　　　　return total/n;<br />
+					　　}<br />
+					｝
+				</div>
+				<br />
+				②　配列tensuで5つの数値の配列を作成し、点数を代入する。<br />
+				③　変数「n」に5を代入する。
+				④　heikin()関数を使用して、配列の数値から平均を出す。<br />
+				　　　　＜ヒント＞→　heikin(tensu,n)<br />
+				⑤　配列の数値を表示させる。<br />
+				　　　　＜ヒント＞→　joinメソッド
+				<br /><br />
+
+				<h2>ポイント</h2>
+				<hr class="size01_black" />
+				<strong>■ 平均を求めるアルゴリズム</strong><br />
+				平均を求めるには、合計を出し、数回で割ります。<br />
+				点数と回数を引数に使うので、heikin(d,n)とします。<br />
+				電卓で集計するときはAC(All Clear)キーを押して0にしてから始めるのと同じように初期値を必ず0にしておきます。<br />
+				total=0;<br />
+				そして、集計するデータを「total」に繰り返し加算していきます。今回は点数を配列で受け取ります。<br />
+				total += d[i];（または、total=total+[d]）<br />
+				合計を回数で割って、平均を計算しreturn文で結果を返します。<br />
+				return total / n;<br /><br />
+				<strong>■ joinメソッド</strong><br />
+				document.write(配列名.join("区切りの文字");<br />
+				「join」メソッドは、配列の要素を区切り文字で連結します。<br />
+				「join("区切り文字")」を指定すると、要素が区切り文字つきで表示されます。<br />
+				()内の指定を省略すると、各要素は「,」で区切られます。<br /><br />
+				<strong>■ 代入演算子</strong><br />
+				代入演算子は、ある値を変数に代入するために用います。<br />
+				基本的には、代入演算子の右辺に記述された値や式を左辺に記述した変数に代入します。<br />
+				<table width="400" style="margin-top: 5px;">
+					<tr>
+						<th>例</th>
+						<th>内　容</th>
+					</tr>
+					<tr>
+						<td>a = b</td>
+						<td>bをaに代入する</td>
+					</tr>
+					<tr>
+						<td>a += b</td>
+						<td>aにa+bを代入する</td>
+					</tr>
+					<tr>
+						<td>a -= b</td>
+						<td>aにa-bを代入する</td>
+					</tr>
+					<tr>
+						<td>a *= b</td>
+						<td>aにa*bを代入する</td>
+					</tr>
+					<tr>
+						<td>a /= b</td>
+						<td>aにa/bを代入する</td>
+					</tr>
+					<tr>
+						<td>a %= b</td>
+						<td>aにa/bの剰余を代入する</td>
+					</tr>
+				</table>
+				<br />
+
+				<h2>答え</h2>
+				<hr class="size01_black" />
+				分からなかった場合などは答えを見てみましょう。<br /><br />
+				<button class="answer-btn">L13の答えを開く</button>
+				<button class="answer-btn2">L13の答えを閉じる</button>
+				<div class="study-answer">
+<pre><code class="prettyprint linenums lang-js">
+&lt;script&gt;
+&lt;/script&gt;
+</code></pre>
+				</div>
+			</main>
+
+			<footer id="footer">
+				<div class="fdr-wrapper">
+					<center><p><a target="_top" href="../../index.html">トップページ</a> | <a target="_top" href="../../study/index.html">問題集</a> | <a target="_top" href="../../beginner-course/index.html">初心者向けコース</a></p></center>
+					<center><p>&copy; 2018 TOKYO ELECTRONICS COLLEGE</p></center>
+					<br />
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

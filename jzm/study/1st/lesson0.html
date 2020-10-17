@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="robots" content="noindex,follow" />
+		<meta http-equiv="imagetoolbar" content="no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="format-detection" content="telephone=no" />
+		<link rel="stylesheet" href="../../common/css/style.css" />
+		<script src="../../common/js/jquery-3.2.1.min.js"></script>
+		<script src="../../common/js/jquery.sticky.js"></script>
+		<script src="../../common/js/footerFixed.js"></script>
+		<script src="../../common/js/def.js"></script>
+		<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+			<script src="https://raw.githubusercontent.com/livingston/css3-mediaqueries-js/master/css3-mediaqueries.js"></script>
+		<![endif]-->
+		<title>[Lesson 0] JavaScriptの記述 | 問題集 | JavaScript 実習問題集</title>
+	</head>
+	<body>
+		<div class="sp_off">
+			<header id="main-head">
+				<div class="inner">
+					<div class="sitename">
+						<h1><a href="../../index.html">JavaScript 実習問題集</a></h1>
+					</div>
+					<nav class="sitenav">
+						<ul>
+							<li><a target="_top" href="../../index.html">トップページ</a></li>
+							<li><a target="_top" href="../../study/index.html">問題集</a></li>
+							<li><a target="_top" href="../../beginner-course/index.html">初心者向けコース</a></li>
+					</nav>
+				</div>
+			</header>
+
+			<main id="wrapper">
+				<nav class="pkz-list">
+					・ <a target="_top" href="../../index.html">トップページ</a> ＞ <a target="_top" href="../index.html">問題集</a> ＞ [Lesson 0] JavaScriptの記述
+				</nav>
+				<br />
+				<h1 class="study-mds">[Lesson 0] JavaScriptの記述</h1>
+				<hr class="size01_black" />
+				<strong>JavaScriptの記述方法を学習しましょう。</strong><br /><br />
+				[　保存名　]　L00<br />
+				[　プログラム仕様書　]　文字列「こんにちは！」「今日からJavaScriptを勉強しましょう！」をJavaScriptを使用し、ブラウザに表示する。<br />
+				[　実行イメージ　]<br />
+				<img src="../../common/img/L00.png" width="900px" height="259px">
+				<br /><br />
+				[コード入力手順]<br />
+				①　テキストエディタ（メモ帳など）を起動し、以下のコードを入力する。<br />
+<pre><code class="prettyprint linenums lang-js">
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;L00&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+はじめてのJavaScript&lt;br /&gt;
+&lt;hr /&gt;
+
+&lt;script&gt;
+	document.write("こんにちは！&lt;br /&gt;今日からJavaScriptを勉強しましょう！");
+&lt;/script&gt;
+
+&lt;hr /&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+				<br />
+				「L00.html」で保存し、ブラウザで確認する。<br /><br />
+
+				<h2>ポイント</h2>
+				<hr class="size01_black" />
+				<strong>■ JavaScriptの書き方</strong><br />
+<pre><code class="prettyprint linenums lang-js">
+&lt;script&gt;
+	document.write("HTML文");
+&lt;/script&gt;
+</code></pre>
+				<br />
+				JavaScript文は&lt;script&gt;・・・&lt;/script&gt;タグで囲んだスクリプトブロック内に記述します。<br />
+				字下げ（インデント）は[Tab]キーあるいは半角スペースを利用することで行うことができます。<br /><br />
+				<strong>■ &lt;hr /&gt;</strong><br />
+				&lt;hr /&gt;は、罫線を引くタグです。<br />
+				document.write("&lt;hr /&gt;");のようにスクリプト出力できますが、スクリプトブロックに書く必要のないものをは通常のHTML文で扱います。<br /><br />
+
+				<h2>アドバイス</h2>
+				<hr class="size01_black" />
+				<p><big><strong>▷JavaScriptの記述の注意</strong></big></p><br />
+				&lt;scrpt&gt;タグで囲まれたコードは大文字・小文字を間違えないように入力する。<br />
+				&lt;scrpt&gt;タグはHTMLファイルの中に何回も記述できます。Webページ読み込み時にスクリプトを動作させたい場合は&lt;body&gt;タグより先に記述します。<br />
+				字下げ（インデント）には全角スペースを使用しません。<br /><br />
+				<p><big><strong>▷エラー表示</strong></big></p><br />
+				JavaScriptのエラー表示はブラウザによって異なります。<br />
+				行番号のエラー表示が出た場合は、その行までコードに誤りがあるという意味です。
+				<br /><br />
+				<p><big><strong>▷字下げ</strong></big></p><br />
+				字下げとはコードを書く際に行頭の位置を周りの文章よりも下げること。<br />
+				下げることによってコードが見やすくなり、ミスにも気づきやすくなるため、プログラム業界では一般的なことになっています。
+			</main>
+
+			<footer id="footer">
+				<div class="fdr-wrapper">
+					<center><p><a target="_top" href="../../index.html">トップページ</a> | <a target="_top" href="../../study/index.html">問題集</a> | <a target="_top" href="../../beginner-course/index.html">初心者向けコース</a></p></center>
+					<center><p>&copy; 2018 TOKYO ELECTRONICS COLLEGE</p></center>
+					<br />
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>
